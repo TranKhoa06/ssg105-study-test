@@ -1,8 +1,8 @@
 # SSG105 · Cùng học trong nhóm riêng
 
-Địa chỉ dự kiến sau khi xuất bản: `https://trankhoa06.github.io/ssg105-study-test/`.
+[Mở giao diện trên GitHub Pages](https://trankhoa06.github.io/ssg105-study-test/).
 
-Trạng thái chuẩn bị: giao diện đã tách khỏi toàn bộ ảnh và câu hỏi SSG; chưa kết nối Supabase thật.
+Trạng thái: giao diện đã được đưa lên GitHub, đã tách khỏi toàn bộ ảnh và câu hỏi SSG; chưa kết nối Supabase thật.
 
 Giao diện ôn tập tương tác dành cho thành viên của nhóm. Nội dung câu hỏi và ảnh SSG lưu trong dịch vụ riêng tư, chỉ tải sau khi xác thực và kiểm tra thành viên được duyệt.
 

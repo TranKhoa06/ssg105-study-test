@@ -137,6 +137,6 @@ async function initialize(){
     questions=bank.questions;if(!Array.isArray(questions)||!questions.length)throw new Error('Chủ nhóm chưa mở bộ câu hỏi SSG105.');byId=new Map(questions.map(q=>[q.id,q]));
     progress=fresh();const saved=await readProgress();if(saved){progress=sanitizeProgress(saved,questions);progress.session=reviveSession(saved.session);}
     progress.session??=newSession('practice',questions.map(q=>q.id));save();render();$('load-status').hidden=true;$('app-content').hidden=false;
-  }catch(error){$('load-status').textContent=`${error.message} Hãy tải lại trang để thử lại.`;}
+  }catch(error){const message=`${error.message} Hãy tải lại trang để thử lại.`;$('load-status').textContent=message;if(!$('auth-gate').hidden)$('auth-message').textContent=message;}
 }
 initialize();
