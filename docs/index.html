@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#234e3d">
+  <meta name="description" content="Ôn tập SSG105 từ 130 cặp ảnh đề và đáp án: luyện từng câu, làm bài, ôn câu sai và xem ảnh nguồn.">
+  <title>SSG105 · Góc ôn tập</title>
+  <link rel="icon" href="icon.svg" type="image/svg+xml"><link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site-header"><a class="brand" href="#" aria-label="Góc ôn tập SSG105"><span class="brand-mark">c.</span><span>cùng học<span class="brand-caption">GÓC ÔN TẬP CỦA BẠN</span></span></a><div class="header-right"><span class="test-badge"><span></span>SSG105 · Nhóm riêng</span><span id="account-label" class="test-badge"></span><button id="backup-button" class="button small secondary" hidden>Sao lưu tiến trình <span aria-hidden="true">↗</span></button><button id="sign-out" class="button small secondary" hidden>Đăng xuất</button></div></header>
+<section id="auth-gate" class="auth-gate"><p class="eyebrow">GÓC HỌC TẬP CỦA NHÓM</p><h1>Cùng học,<br><em>trong không gian riêng.</em></h1><p id="auth-message">Đang kiểm tra đăng nhập…</p><button id="google-login" class="button primary" disabled>Đăng nhập bằng Google ↗</button><p class="auth-caption">Tài liệu và ảnh chỉ dành cho thành viên được chủ nhóm duyệt.</p></section>
+<div class="workspace" id="protected-workspace" hidden>
+  <aside class="sidebar"><div class="sidebar-label">THƯ VIỆN MÔN HỌC <span>03</span></div><button class="subject-card current" id="ssg-subject"><span class="subject-icon">↗</span><span><strong>SSG105</strong><small>130 câu từ ảnh tài liệu</small></span><span class="subject-dot"></span></button><div class="subject-card waiting"><span class="subject-icon">02</span><span><strong>Môn thứ hai</strong><small>Chờ bổ sung tài liệu</small></span><span>＋</span></div><div class="subject-card waiting"><span class="subject-icon">03</span><span><strong>Môn thứ ba</strong><small>Chờ bổ sung tài liệu</small></span><span>＋</span></div>
+    <div class="sidebar-divider"></div><div class="sidebar-label">CÁCH BẠN MUỐN HỌC</div>
+    <nav class="study-nav" aria-label="Chế độ học"><button data-mode="practice" class="active"><span>▤</span>Luyện từng câu<span class="nav-arrow">↗</span></button><button data-mode="exam"><span>◷</span>Làm bài kiểm tra</button><button data-mode="wrong"><span>↺</span>Ôn câu còn sai <b id="wrong-count">0</b></button><button data-mode="saved"><span>◇</span>Câu đã lưu <b id="saved-count">0</b></button></nav>
+    <div class="sidebar-note"><span class="note-art" aria-hidden="true">✳</span><strong>Chậm một chút.<br>Hiểu thêm một chút.</strong><p>Chọn đáp án trước, rồi đọc lời giải để biết mình cần ôn lại điều gì.</p></div>
+    <p class="local-note"><span aria-hidden="true">◉</span> Tiến trình riêng theo tài khoản, lưu online để tiếp tục trên thiết bị khác.</p><p id="sync-status" class="local-note" role="status"></p>
+  </aside>
+  <main id="main-content"><div class="page-intro"><div><p class="eyebrow">GÓC HỌC TẬP / SSG105</p><h1>Mỗi câu hỏi,<br><em>một điều hiểu thêm.</em></h1><p class="intro-copy">Bắt đầu từ tài liệu của bạn. Luyện tập theo nhịp của bạn.</p></div><div class="intro-decoration" aria-hidden="true"><span class="orbit one"></span><span class="orbit two"></span><span class="orbit three"></span><span class="orbit-center">↗</span><span class="orbit-caption">a little, every day.</span></div></div>
+    <div id="load-status" role="status" class="load-status">Đang chuẩn bị bộ ảnh SSG105…</div>
+    <div id="app-content" hidden>
+      <section class="stats-grid" aria-label="Tiến trình SSG105"><div class="stat-card"><span class="stat-icon sage">▤</span><div><strong id="answered-stat">0<span>/130</span></strong><p>Câu đã luyện</p></div></div><div class="stat-card"><span class="stat-icon sand">✓</span><div><strong id="correct-stat">0</strong><p>Đúng ở lần đầu</p></div></div><div class="stat-card"><span class="stat-icon rose">↺</span><div><strong id="review-stat">0</strong><p>Câu cần ôn lại</p></div></div></section>
+      <section class="study-panel"><div class="panel-heading"><div><p class="eyebrow" id="mode-eyebrow">TỪNG BƯỚC MỘT</p><h2 id="mode-heading">Luyện từng câu</h2></div><div class="source-count"><span class="source-dot"></span>130 cặp ảnh gốc</div></div>
+        <div class="toolbar"><label class="search-box"><span aria-hidden="true">⌕</span><input id="search" type="search" placeholder="Tìm nội dung hoặc số câu…" aria-label="Tìm câu hỏi"></label><label class="sr-only" for="status-filter">Lọc câu hỏi</label><select id="status-filter"><option value="all">Tất cả câu hỏi</option><option value="unanswered">Chưa làm</option><option value="review">Cần bổ sung dữ liệu</option></select><button class="button secondary" id="shuffle-button"><span aria-hidden="true">⇄</span>Trộn câu</button></div>
+        <div id="exam-controls" class="exam-controls" hidden><label>Số câu <select id="exam-length"><option value="10">10 câu</option><option value="20">20 câu</option><option value="50">50 câu</option><option value="130">Toàn bộ 130 câu</option></select></label><button id="start-exam" class="button primary">Bắt đầu bài mới <span>↗</span></button><p>Đáp án và kết quả hiện sau khi nộp bài.</p></div>
+        <div id="exam-summary" class="exam-summary" hidden aria-live="polite"></div>
+        <div class="reading-progress"><span id="queue-label"></span><div class="progress-track"><div id="queue-progress"></div></div><span id="session-indicator"></span></div>
+        <div id="question-host"></div>
+        <div id="jump-host"></div>
+      </section>
+      <p class="source-note">Chấm theo ảnh đáp án bạn cung cấp. Nội dung chữ được nhận dạng từ ảnh và chưa kiểm chứng độc lập; có thể mở ảnh gốc để đối chiếu.</p>
+      <footer class="page-footer"><span>cùng học <span>·</span> SSG105</span><span>130 ảnh đề <span>·</span> 130 ảnh đáp án</span></footer>
+    </div>
+  </main>
+</div>
+<div class="toast" id="toast" role="status" hidden></div>
+<dialog id="image-dialog" class="image-dialog"><div class="dialog-heading"><h2 id="image-title">Ảnh nguồn</h2><button id="close-image" class="icon-button" aria-label="Đóng ảnh">×</button></div><div class="image-scroll"><img id="dialog-image" alt=""></div><p>Ảnh giữ nguyên tỷ lệ. Trên điện thoại có thể cuộn ngang để xem ảnh lớn.</p></dialog>
+<dialog id="backup-dialog" class="backup-dialog"><div class="dialog-heading"><h2>Sao lưu tiến trình</h2><button id="close-backup" class="icon-button" aria-label="Đóng sao lưu">×</button></div><p>Xuất thêm một bản sao kết quả và câu đã lưu. Tiến trình online gắn với tài khoản đang đăng nhập.</p><button id="export-progress" class="button primary">Tải tiến trình JSON ↓</button><label class="button secondary import-button">Nhập tiến trình JSON<input id="import-progress" type="file" accept="application/json,.json" hidden></label><p class="fine-print">Nhập tệp sẽ thay thế tiến trình của tài khoản hiện tại. Hãy xuất bản sao trước nếu cần giữ lại.</p></dialog>
+<script type="module" src="app.mjs"></script>
+</body></html>
